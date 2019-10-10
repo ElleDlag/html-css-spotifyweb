@@ -1,0 +1,24 @@
+.abs_tl0{
+    position: absolute;
+    display: block;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+
+.abs_tl50{
+    position: absolute;
+    display: block;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.mtb24{
+    margin:24px 0;
+}
+
+.flex-this{
+    display: flex
+}
