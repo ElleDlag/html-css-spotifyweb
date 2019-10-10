@@ -1,0 +1,22 @@
+/* class for text */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size:10px;
+    color:white;
+}
+a{  text-decoration: none;
+    color:white;
+}
+ul,li{
+    list-style-type: none;
+}
+h1{
+    font-family: "spotify-circular";
+    font-weight: 600;
+    font-size: 36px;
+    font-style: normal;
+}
