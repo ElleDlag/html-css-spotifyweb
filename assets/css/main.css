@@ -1,0 +1,15 @@
+@import url("../fonts/fonts.css");
+
+h1{
+    font-family: "spotify-circular";
+    font-weight: 600;
+    font-style: normal;
+}
+
+main{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(-45deg, #424357, #000000, #7102b6,#2d1ce6,#1e5799,#89dcff, rgb(155, 255, 212));
+    background-size: 400% 400%;
+    animation: gradientBG 40s ease infinite;
+}

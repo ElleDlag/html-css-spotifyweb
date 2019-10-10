@@ -1,0 +1,23 @@
+@keyframes gradientBG {
+    0% {
+		background-position: 0% 14%;
+	}
+	14% {
+		background-position: 14% 42%;
+	}
+	42% {
+		background-position: 42% 56%;
+	}
+	56% {
+		background-position: 56% 70%;
+	}
+	70% {
+		background-position: 70% 84%;
+	}
+	84% {
+		background-position: 84% 100%;
+	}
+	100% {
+		background-position: 0% 14%;
+	}
+}
