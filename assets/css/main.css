@@ -1,7 +1,6 @@
 body{
     position: relative;
 }
-
 /* #region  BACKGROUND */
 .background-fixed{
     position: fixed;
@@ -14,8 +13,9 @@ body{
 }
 /* #endregion */
 
-
 /* #region  NAVIGATION ASIDE */
+
+/* #region  general and logo */
 nav.aside{
     position: fixed;
     top:0;
@@ -24,10 +24,139 @@ nav.aside{
     min-width: 60px;
     height: calc(100% - 90px);
     background: #00000080;
-    transition: all 150ms ease-in-out
+    transition: all 150ms ease-in-out;
+    display:flex;
+    flex-flow: column nowrap;
+    padding-top:24px;
+    overflow-y: auto;
+}
+.aside_icon{
+    width:24px;
+    height: auto;
+}
+.aside_logo{
+    padding: 0 24px;
+}
+.aside_logo >img:first-child{
+    width:131px;
+    height:auto;
+}
+.aside_logo >img:not(:first-child){
+    width:40px;
+    height:auto;
+    display:none
 }
 /* #endregion */
 
+/* #region  top list */
+.aside_list--top{
+    margin-top:24px;
+}
+.aside_list--top ul li{
+    height:40px;
+    line-height: 40px;
+    padding: 0 24px;
+    position: relative;
+}
+.aside_list--top ul li>*{
+    display: flex;
+    align-items: center;
+}
+/* #endregion */
+
+/* #region  bottom list */
+.aside_list--bottom{
+    flex:1;
+    min-height: 175px;
+    flex-flow: column nowrap;
+    margin-top:24px;
+}
+.aside_category-btn{
+    height: 62px;
+    line-height: 62px;
+    padding:0 24px;
+}
+.aside_subgroup{
+    align-items: center;
+}
+.aside .plus-sign{
+    background:#fff;;
+    width:32px;
+    height:32px;
+    opacity:.6;
+    position: relative;
+}
+.aside_list--bottom ul{
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    margin:0;
+}
+.aside_list--bottom ul li{
+    height:32px;
+    line-height: 32px;
+    padding: 0 24px;
+    position: relative;
+}
+/* #endregion */
+
+/* #region  footer list */
+.aside_footer>*{
+    padding:0 24px;
+    display: flex;
+    height:40px;
+    align-items: center;
+    position: relative;
+}
+.aside_footer>.download:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    width: 150px;
+    height:1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.aside_footer-text{
+    margin-left:16px;
+}
+.aside_footer-avatar + span {
+    margin-left:12px;
+}
+.aside_footer-avatar{
+    height:28px;
+    width:28px;
+    background-image:url(https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10207422251062746&height=200&width=200&ext=1573374937&hash=AeS-LJbNajE1JSPF);
+    background-size: cover;
+    border-radius: 50%;
+    margin-left:7px;
+}
+/* #endregion */
+
+/* #region  behavior */
+.aside_list--top ul li:hover:before,
+.aside_list--bottom ul li:not(.aside_category-btn):hover:before,
+.aside_footer>.download:hover:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left:0;
+    top: 5px;
+    bottom: 5px;
+    width: 4px;
+    background-color: #1ed760;
+}
+.aside_list--top ul li:hover a>*,
+.aside_list--bottom ul li:hover a,
+.aside_list--bottom ul li:hover a>*,
+.aside_footer>*>span:hover{
+    opacity: 1;
+    transition: opacity 400ms ease-out
+}
+/* #endregion */
+
+/* #endregion */
 
 /* #region  MAIN WITH SECTION */
 main{
@@ -47,6 +176,7 @@ main nav{
     opacity: 1;
     transition: opacity 400ms ease-out
 }
+.active>span,
 .main_nav-list a.active{
     opacity:1
 }
@@ -141,7 +271,6 @@ a.main_sec--cover-artist,
 
 /* #endregion */
 
-
 /* #region  FOOTER */
 footer{
     height: 90px;
@@ -195,9 +324,59 @@ footer{
         padding:0 16px;
         min-width: 300px;
     }
+
     nav.aside{
         width:90px;
     }
+    .aside_icon{
+        width:32px;
+    }
+    .aside_logo >img:first-child{
+        display: none
+    }
+    .aside_logo >img:not(:first-child){
+        display:block;
+    }
+    .aside_list--top {
+        flex:1
+    }
+    .aside_list--top ul li{
+        height:60px;
+        line-height: 60px;
+    }
+    .aside_list--top ul li>*{
+       justify-content: center
+    }
+            
+    .aside_list--top ul li span{
+        display:none
+    }
+    .aside_list--bottom{
+        display:none
+    }
+    .aside_footer>*{
+        display: flex;
+
+        justify-content: center
+    }
+    .aside_footer>.download:after{
+        width: 50px;
+    }
+    .aside_footer span{
+        display:none;
+    }
+    .aside_footer .far{
+        font-size: 20px
+    }
+    .aside_footer-text,
+    .aside_footer-avatar {
+       margin-left: 0
+    }
+    .aside_list--top ul li:hover:before,
+    .aside_list--bottom ul li:not(.aside_category-btn):hover:before,
+    .aside_footer>.download:hover:before{
+        all:unset
+}
 }
 @media (max-width:576px){
     .main_sec--cover{
