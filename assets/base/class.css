@@ -14,6 +14,17 @@ a{  text-decoration: none;
     color:white;
     cursor: pointer;
 }
+a.main_nav-link{
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding:5px 10px;
+    margin:10px;
+    letter-spacing: .16em;
+    position: relative;
+    opacity: .6
+}
 ul,li{
     list-style-type: none;
 }
