@@ -273,13 +273,71 @@ a.main_sec--cover-artist,
 
 /* #region  FOOTER */
 footer{
-    height: 90px;
+
     width:100%;
+    min-width:622px;
     background: #181818;
     position: fixed;
     bottom:0;
-    z-index:3
+    z-index:3;
+    display:flex;
+    justify-content: space-between;
+    text-align:center;
+    border:1px solid red;
+    padding: 20px 16px;
 }
+footer>*{
+    border:1px solid red;
+}
+
+
+
+footer .player_left,
+footer .player_right{
+    min-width: 180px;
+    width:30%;
+    align-items: center;
+    justify-content: space-between;
+}
+.player_album-info{
+    flex:1;
+    margin:0 14px;
+}
+.player_album-info>*{
+    display: block;
+    text-align: left;
+}
+.player_intarctivity a{
+    display: inline-block;
+    position: relative;
+    font-family: glue1-spoticon;
+    font-size: 1.6rem;
+    width:32px;
+    height:32px;
+    opacity:.6
+}
+.player_right a>img,
+.player_right .like:before{
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.player_right .like:before{
+    content: "\f320";
+}
+.player_cover{
+    width:56px;
+    padding-top: 100%;
+}
+footer .player_middle{
+    width:40%;
+    max-width: 722px;
+}
+
+
+
 /* #endregion */
 
 

@@ -21,9 +21,9 @@
 }
 
 
-
 body{
     font-family: "spotify-circular";
+    font-size: 10px;
     font-weight: 400;
     color:white;
 }
@@ -63,6 +63,13 @@ a.main_nav-link{
     letter-spacing: .16em;
     position: relative;
     opacity: .6
+}
+a.player_title{
+    font-size: 1.4rem;
+}
+a.player_info{
+    font-size: 1.2rem;
+    opacity: .6;
 }
 ul,li{
     list-style-type: none;

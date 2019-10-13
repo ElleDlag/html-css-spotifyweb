@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="assets/base/common.css">
 	<link rel="stylesheet" href="assets/base/class.css">
 	<link rel="stylesheet" href="assets/base/animation.css">
+	<link rel="stylesheet" href="assets/components/control-player.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	
 	<title>Spotify rebuild</title>
@@ -766,10 +767,48 @@
 
 
 		<!-- footer -->
-		<footer class="palyer-container"><!-- flex here -->
-			<div destra></div>
-			<div centro></div>
-			<div sinistra></div>
+		<footer class="player_container"><!-- flex here -->
+			<div class="player_right flex-this">
+				<div class="player_album-ico">
+					<div class="player_cover" style="background-image:url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=320&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=320')">
+					</div>
+				</div>
+				<div class="player_album-info">
+					<a class="player_title">Title Album</a>
+					<a class="player_info">Name artist, Other info</a>
+				</div>
+				<div class="player_intarctivity">
+					<a class="like"></a>
+					<a class="miniplayer">
+						<img src="assets/img/miniplayer.svg" alt="">
+					</a>
+				</div>
+				
+			</div>
+			<div class="player_middle">
+				<div class="player">
+					<div class="player_set-control">
+						<div class="control_shuffle"></div>
+						<div class="control_back"></div>
+						<div class="control_play">
+							<input type="checkbox" id="toggle_play">
+							<label for="toggle_play" class="toggle_play"></label>
+						</div>
+						<div class="control_next"></div>
+						<div class="control_loop"></div>
+					</div>
+					<div class="player_seek">
+						<div class="seek_progress">2:18</div><!-- 60% -->
+						<div class="seek_line">
+							<div class="seek_control"></div>
+						</div>
+						<div class="seek_time">3:50</div>
+					</div>
+				</div>
+			</div>
+			<div class="player_left">
+				CIAO CIAO
+			</div>
 		</footer>
 	</div>
 </body>
