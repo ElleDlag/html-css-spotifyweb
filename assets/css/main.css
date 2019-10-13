@@ -302,10 +302,14 @@ footer .player_right{
 .player_album-info{
     flex:1;
     margin:0 14px;
+    overflow: hidden;  
 }
 .player_album-info>*{
     display: block;
     text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .player_intarctivity a{
     display: inline-block;
