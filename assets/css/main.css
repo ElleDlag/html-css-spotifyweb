@@ -290,19 +290,16 @@ footer>*{
     border:1px solid red;
 }
 
-
-
 footer .player_left,
 footer .player_right{
     min-width: 180px;
     width:30%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .player_album-info{
-    flex:1;
     margin:0 14px;
-    overflow: hidden;  
+    overflow: hidden;
 }
 .player_album-info>*{
     display: block;
@@ -311,7 +308,8 @@ footer .player_right{
     white-space: nowrap;
     overflow: hidden;
 }
-.player_intarctivity a{
+a.player_like,
+a.player_mini{
     display: inline-block;
     position: relative;
     font-family: glue1-spoticon;
@@ -320,15 +318,15 @@ footer .player_right{
     height:32px;
     opacity:.6
 }
-.player_right a>img,
-.player_right .like:before{
+a.player_mini>img,
+a.player_like:before{
     display: block;
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
 }
-.player_right .like:before{
+a.player_like:before{
     content: "\f320";
 }
 .player_cover{
