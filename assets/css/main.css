@@ -273,7 +273,6 @@ a.main_sec--cover-artist,
 
 /* #region  FOOTER */
 footer{
-
     width:100%;
     min-width:622px;
     background: #181818;
@@ -283,15 +282,11 @@ footer{
     display:flex;
     justify-content: space-between;
     text-align:center;
-    border:1px solid red;
-    padding: 20px 16px;
+    padding: 16px 16px;
 }
-footer>*{
-    border:1px solid red;
-}
-
 footer .player_left,
 footer .player_right{
+    display: flex;
     min-width: 180px;
     width:30%;
     align-items: center;
@@ -315,6 +310,7 @@ a.player_mini{
     font-family: glue1-spoticon;
     font-size: 1.6rem;
     width:32px;
+    min-width:32px;
     height:32px;
     opacity:.6
 }
@@ -336,6 +332,69 @@ a.player_like:before{
 footer .player_middle{
     width:40%;
     max-width: 722px;
+}
+footer .player_left{
+    justify-content: flex-end;
+}
+.player_left>a{
+    position: relative;
+    font-family: glue1-spoticon;
+    font-size: 1.6rem;
+    width:32px;
+    height:32px;
+    opacity:.6;
+}
+.player_left>a:hover{
+    opacity:1;
+    color:#1ed760
+}
+.player_left>a:before{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.player_list::before{
+    content: "\f13a";
+}
+.player_device::before{
+    content: "\f213";
+}
+.player_volume::before{
+    content: "\f15e";
+}
+.volume-bar{
+    position: relative;
+    cursor: pointer;
+}
+.volume-bar,
+.volume-bar::before{
+    width:84px;
+    height:4px;
+    background:white;
+    opacity: .8;
+    border-radius: 2px;
+}
+.volume-bar:hover::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:70%;
+    background: #1ed760;
+    opacity:1;
+}
+.volume-bar:hover::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:70%;
+    height:15px;
+    width:15px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #fff;
+    opacity:1;
 }
 
 
